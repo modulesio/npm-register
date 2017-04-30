@@ -21,7 +21,9 @@ module.exports = {
   },
   auth: {
     write: (env.NPM_REGISTER_AUTH_WRITE || 'true') === 'true',
-    read: (env.NPM_REGISTER_AUTH_READ || 'false') === 'true'
+    read: (env.NPM_REGISTER_AUTH_READ || 'false') === 'true',
+    scope: 'npmc',
+    credentialsPath: 'credentials.json',
   },
   httpProxyHost: env.HTTP_PROXY_HOST,
   httpProxyPort: env.HTTP_PROXY_PORT,
